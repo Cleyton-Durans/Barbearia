@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Agendar - Barbearia FitPower{% endblock %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="text-center mb-5">
+  <h2 class="fw-bold text-dark">Nossos Serviços</h2>
+  <p class="text-muted">Escolha seu serviço e agende sua vez de forma rápida e prática!</p>
+</div>
+
+<div class="row g-4 mb-5">
+  {% for servico in servicos %}
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm border-0">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">{{ servico.nome }}</h5>
+        <p class="card-text text-muted">{{ servico.descricao }}</p>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <p class="text-center">Nenhum serviço cadastrado ainda.</p>
+  {% endfor %}
+</div>
+
+<hr class="my-5">
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h3 class="text-center mb-3">📅 Agende sua vez</h3>
+    <form method="post" class="card p-4 shadow-sm bg-white">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label class="form-label">Nome</label>
+        {{ form.nome|add_class:"form-control" }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Serviço</label>
+        {{ form.servico|add_class:"form-select" }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Data</label>
+        {{ form.data|add_class:"form-control" }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Hora</label>
+        {{ form.hora|add_class:"form-control" }}
+      </div>
+      <button type="submit" class="btn btn-dark w-100">Agendar</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
