@@ -3,6 +3,7 @@
 {% load static %}
 {% load widget_tweaks %}
 {% block content %}
+
 <div class="text-center mb-5">
   <h2 class="fw-bold text-dark">Nossos Serviços</h2>
   <p class="text-muted">Escolha seu serviço e agende sua vez de forma rápida e prática!</p>
@@ -15,6 +16,7 @@
       <div class="card-body">
         <h5 class="card-title fw-bold">{{ servico.nome }}</h5>
         <p class="card-text text-muted">{{ servico.descricao }}</p>
+        <p class="card-text text-muted">Preço: R$ {{ servico.preco }}</p>
       </div>
     </div>
   </div>

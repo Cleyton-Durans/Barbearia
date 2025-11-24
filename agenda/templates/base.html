@@ -17,11 +17,17 @@
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="btn btn-danger ms-3">Sair</a>
+    {% endif %}
     <div class="container">
       <a class="navbar-brand fw-bold" href="{% url 'index' %}">💈 Barbearia FitPower</a>
       <div class="d-flex">
         <a href="{% url 'index' %}" class="nav-link text-white">Início</a>
         <a href="{% url 'lista' %}" class="nav-link text-white">Lista de Espera</a>
+        {% if not request.user.is_authenticated %}
+        <a href="{% url 'login' %}" class="nav-link text-white">Login</a>
+        {% endif %}
         <a href="https://wa.me/5599999999999" target="_blank" class="btn btn-success ms-3">
           <i class="bi bi-whatsapp"></i> WhatsApp
         </a>
