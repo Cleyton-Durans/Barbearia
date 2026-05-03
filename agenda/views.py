@@ -10,7 +10,7 @@ def index(request):
         form = EsperaForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('lista')
+            return redirect('index')
     else:
         form = EsperaForm()
     return render(request, 'index.html', {'form': form, 'servicos': servicos})

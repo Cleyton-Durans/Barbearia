@@ -17,8 +17,8 @@ class Espera(models.Model):
 
     nome = models.CharField(max_length=100)
     servico = models.ForeignKey(Servico, on_delete=models.CASCADE)
-    data = models.DateField()
-    hora = models.TimeField()
+    data = models.DateField(auto_now_add=True)
+    hora = models.TimeField(auto_now=True)
     status = models.CharField(max_length=20, choices=STATUS, default='Aguardando')
 
     def __str__(self):

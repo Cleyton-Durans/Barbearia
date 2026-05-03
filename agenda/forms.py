@@ -4,8 +4,8 @@ from .models import Espera
 class EsperaForm(forms.ModelForm):
     class Meta:
         model = Espera
-        fields = ['nome', 'servico', 'data', 'hora']
+        fields = ['nome', 'servico']
         widgets = {
-            'data': forms.DateInput(attrs={'type': 'date'}),
-            'hora': forms.TimeInput(attrs={'type': 'time'}),
+            'nome': forms.TextInput(attrs={'class': 'form-control'}),
+            'servico': forms.Select(attrs={'class': 'form-control'}),   
         }

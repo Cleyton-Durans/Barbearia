@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Agendar - Barbearia FitPower{% endblock %}
+{% block title %}Agendar - Barbearia {% endblock %}
 {% load static %}
 {% load widget_tweaks %}
 {% block content %}
@@ -39,14 +39,6 @@
       <div class="mb-3">
         <label class="form-label">Serviço</label>
         {{ form.servico|add_class:"form-select" }}
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Data</label>
-        {{ form.data|add_class:"form-control" }}
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Hora</label>
-        {{ form.hora|add_class:"form-control" }}
       </div>
       <button type="submit" class="btn btn-dark w-100">Agendar</button>
     </form>
