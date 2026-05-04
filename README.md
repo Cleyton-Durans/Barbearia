@@ -1,8 +1,8 @@
-# 💈 Barbearia FitPower — Sistema de Agendamento e Lista de Espera
+# 💈 Barbearia Do Durans — Sistema de Agendamento e Lista de Espera
 
 ## 📌 Sobre o Projeto
 
-O **Barbearia FitPower** é um sistema web desenvolvido com **Django + HTML + CSS (Bootstrap)** que permite:
+O **Barbearia Do Durans** é um sistema web desenvolvido com **Django + HTML + CSS (Bootstrap)** que permite:
 
 * Exibir serviços (barbearia/academia)
 * Criar uma **lista de espera online**
@@ -289,24 +289,3 @@ DATABASES = {
 ## 👨‍💻 Autor
 
 Desenvolvido por **Cleyton Durans**
-
----
-
-## 📄 Licença
-
-Este projeto é de uso livre para fins de estudo e desenvolvimento.
-
----
-
-## 💬 Observação Final
-
-Este projeto foi pensado para ser:
-
-✔ Simples de usar
-✔ Fácil de adaptar
-✔ Pronto para produção
-✔ Escalável
-
----
-
-🔥 Se quiser evoluir esse sistema (app mobile, API, dashboard profissional), é totalmente possível expandir a partir dessa base.
