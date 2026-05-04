@@ -30,4 +30,4 @@ def finalizar(request, espera_id):
 @login_required
 def logout(request):
     logout(request)
-    return redirect('index')
+    return redirect('login')
