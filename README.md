@@ -1,4 +1,4 @@
-# 💈 Barbearia Do Durans — Sistema de Agendamento e Lista de Espera
+# Barbearia Do Durans — Sistema de Agendamento e Lista de Espera
 
 ## 📌 Sobre o Projeto
 
